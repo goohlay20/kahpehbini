@@ -17,7 +17,7 @@ const app = express();
 const baseURL="/api/v1";
 
 db();
-app.use(cors({origin:["http://localhost:5173/"],credentials:true}));
+app.use(cors({origin:["http://localhost:5173"],credentials:true}));
 app.use(express.json());
 app.use(helmet());
 
