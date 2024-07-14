@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import helmet from 'helmet';
 import db from './config/db.js';
 import userRoutes from './routes/user.routes.js';
@@ -10,7 +11,7 @@ import subscriptionRoutes from './routes/subscription.routes.js';
 import { pageNotFound, errorHandler } from './middleswares/error.middleware.js';
 import addressRoutes from './routes/address.routes.js';
 
-const cors = require('cors');
+
 
 dotenv.config();
 
