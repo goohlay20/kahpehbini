@@ -16,7 +16,7 @@ dotenv.config();
 const app = express();
 const baseURL="/api/v1";
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://kahpehbini.vercel.app",
   credentials: true,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization",
