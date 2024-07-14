@@ -4,8 +4,8 @@ import useFetchData from "../hooks/useFetchData";
 import Slider from "react-slick";
 import Button from "../layouts/Button";
 import { BsStarHalf, BsStarFill } from "react-icons/bs";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import MyContext from "../authContext";
 
