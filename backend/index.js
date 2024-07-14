@@ -15,16 +15,18 @@ dotenv.config();
 
 const app = express();
 const baseURL="/api/v1";
+const corsOptions = {
+  origin: "http://localhost:5173",
+  credentials: true,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+} 
 
 db();
 app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true,
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-  })
+  cors(corsOptions)
 );
+app.options("*",cors(corsOptions))
 app.use(express.json());
 app.use(helmet());
 
