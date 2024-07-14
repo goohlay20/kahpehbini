@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import Navbar from "../Navbar";
-import bpi from "./bpi.JPG";
-import unionbank from "./unionbank.JPG";
-import gcash from "./gcash.JPG";
-import maya from "./maya.JPG";
+import bpi from "./bpi.jpg";
+import unionbank from "./unionbank.jpg";
+import gcash from "./gcash.jpg";
+import maya from "./maya.jpg";
 import useAddData from "../../hooks/useAddData";
 import MyContext from "../../authContext";
 import { useNavigate } from "react-router-dom";
