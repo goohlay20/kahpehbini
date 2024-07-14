@@ -10,20 +10,9 @@
       {
         "src": "/(.*)",
         "dest": "index.js",
-        "headers": [
-          {
-            "key": "Access-Control-Allow-Origin",
-            "value": "http://localhost:5173"
-          },
-          {
-            "key": "Access-Control-Allow-Methods",
-            "value": "GET, POST, PUT, DELETE, OPTIONS"
-          },
-          {
-            "key": "Access-Control-Allow-Headers",
-            "value": "X-Requested-With, Content-Type, Authorization"
-          }
-        ]
+        "headers": { 
+            "Access-Control-Allow-Origin": "http://localhost:5173" 
+        }      
       }
     ]
   }
