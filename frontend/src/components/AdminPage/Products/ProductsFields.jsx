@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import InputField from '../../../utility/products.utils/productFields/InputFIeld';
+import InputField from '../../../utility/products.utils/productFields/InputField';
 import ImageField from '../../../utility/products.utils/productFields/ImageField';
 import TextAreaField from '../../../utility/products.utils/productFields/TextAreaField';
 
