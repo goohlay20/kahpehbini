@@ -11,6 +11,8 @@ import subscriptionRoutes from './routes/subscription.routes.js';
 import { pageNotFound, errorHandler } from './middleswares/error.middleware.js';
 import addressRoutes from './routes/address.routes.js';
 
+const cors = require('cors');
+
 dotenv.config();
 
 const app = express();
@@ -22,11 +24,13 @@ const corsOptions = {
   allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization",
 } 
 
+
 db();
-app.use(
-  cors(corsOptions)
-);
-app.options("*",cors(corsOptions))
+app.use(cors()); 
+// app.use(
+//   cors(corsOptions)
+// );
+// app.options("*",cors(corsOptions))
 app.use(express.json());
 app.use(helmet());
 
