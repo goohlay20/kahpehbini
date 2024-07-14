@@ -4,15 +4,15 @@ import useFetchData from "../hooks/useFetchData";
 import Slider from "react-slick";
 import Button from "../layouts/Button";
 import { BsStarHalf, BsStarFill } from "react-icons/bs";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import MyContext from "../authContext";
 
 const HomeProduct = () => {
   const { cartOrderCount, setCartOrderCount } = useContext(MyContext);
   const { data, error, refetch } = useFetchData(
-    "https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/products"
+    "https://kahpehbini-api.vercel.app/api/v1/products"
   );
   const [products, setProducts] = useState([]);
   // const [cartCount, setCartCount] = useState(0);

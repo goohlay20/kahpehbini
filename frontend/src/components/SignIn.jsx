@@ -14,7 +14,7 @@ const SignIn = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const {data:{data}} = await axios.post("https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/users/login", { email, password });
+            const {data:{data}} = await axios.post("https://kahpehbini-api.vercel.app/api/v1/users/login", { email, password });
             const role = data.role;
             
             localStorage.setItem("user", JSON.stringify(data));

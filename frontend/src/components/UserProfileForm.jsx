@@ -12,7 +12,7 @@ const UserProfileForm = ({ user }) => {
   const [profile, setProfile]=useState({});
   const [formEditable, setFormEditable] = useState(false);
   const { register, handleSubmit, formState: { errors, isDirty }, reset, trigger } = useForm({ defaultValues: profile });
-  const { data: regionList } = useFetchData("https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/regions");
+  const { data: regionList } = useFetchData("https://kahpehbini-api.vercel.app/api/v1/regions");
   const { data: fetchedProfile, refetch: refetchedProfile } = useFetchData(`https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/users/${user._id}`);
   const createdAt = new Date(profile.createdAt);
   const formattedDate = `${createdAt.toLocaleString('en-US', { month: 'short' })} ${createdAt.getDate()}, ${createdAt.getFullYear()}`;
