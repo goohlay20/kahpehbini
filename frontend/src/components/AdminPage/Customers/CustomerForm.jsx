@@ -4,7 +4,7 @@ import useUpdateData from "../../../hooks/useUpdateData";
 import MyContext from "../../../authContext";
 
 const CustomerForm = ({ customerId, setShowModal, toggleModal, setErrorMessage, setSuccessMessage, refetch }) => {
-  const { data } = useFetchData(`https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/users/`);
+  const { data } = useFetchData(`https://kahpehbini-api.vercel.app/api/v1/users/`);
   const [selectedCustomer, setSelectedCustomer] = useState({});
   const [role, setRole] = useState("");
   const [updateRole] = useUpdateData();
@@ -18,7 +18,7 @@ const CustomerForm = ({ customerId, setShowModal, toggleModal, setErrorMessage, 
     };
 
     try {
-      await updateRole(`https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/users/${customerId}`, updatedRole, user.accessToken);
+      await updateRole(`https://kahpehbini-api.vercel.app/api/v1/users/${customerId}`, updatedRole, user.accessToken);
       setSuccessMessage("Updated successfully.");
       handleTimeout("success");
       refetch();

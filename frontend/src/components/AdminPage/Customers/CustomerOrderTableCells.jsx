@@ -11,10 +11,10 @@ const CustomerOrderTableCells = ({ order }) => {
   const [formattedOrder, setFormattedOrder] = useState("");
   const [products, setProducts] = useState([]);
   const { data: userList, error: userError, refetch: userRefetch } = useFetchData(
-    "https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/users"
+    "https://kahpehbini-api.vercel.app/api/v1/users"
   );
   const { data: productList, error: productError, refetch: productRefetch } = useFetchData(
-    "https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/products"
+    "https://kahpehbini-api.vercel.app/api/v1/products"
   );
 
   useEffect(()=> {

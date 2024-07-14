@@ -3,7 +3,7 @@ import useFetchData from "../../hooks/useFetchData";
 import OrderTableCells from "./OrderTableCells";
 
 const OrderHistory = ({ user, handleOrderDetails }) => {
-  const { data, error, refetch } = useFetchData(`https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/orders/user/${user._id}`);
+  const { data, error, refetch } = useFetchData(`https://kahpehbini-api.vercel.app/api/v1/orders/user/${user._id}`);
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     if (data) {

@@ -60,7 +60,7 @@ const CheckedOut = () => {
 
     try {
       const savedOrder = await addData(
-        "http://localhost:8080/api/v1/orders",
+        "https://kahpehbini-api.vercel.app/api/v1/orders",
         newOrder,
         user.accessToken
       );
@@ -74,7 +74,7 @@ const CheckedOut = () => {
 
       try {
         await addData(
-          "http://localhost:8080/api/v1/payments",
+          "https://kahpehbini-api.vercel.app/api/v1/payments",
           paymentDetails,
           user.accessToken
         );

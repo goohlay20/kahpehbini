@@ -3,7 +3,7 @@ import useFetchData from "../../hooks/useFetchData";
 import { format, parseISO } from "date-fns";
 
 const OrderTableCells = ({ order, handleOrderDetails }) => {
-  const { data, error, refetch } = useFetchData("https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/products");
+  const { data, error, refetch } = useFetchData("https://kahpehbini-api.vercel.app/api/v1/products");
   const [products, setProducts] = useState([]);
   const [orderList, setOrderList ] = useState([]);
   const [orderDate, setOrderDate] = useState("");

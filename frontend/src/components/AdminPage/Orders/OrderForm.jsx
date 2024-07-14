@@ -26,7 +26,7 @@ const OrderForm = ({ setCurrentOrder, currentOrder, editIndex, setShowModal, tog
   const handleSubmit = async(e) => {
     e.preventDefault();
     try {
-      await updateOrder(`https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/orders/${currentOrder._id}`, currentOrder, user.accessToken);
+      await updateOrder(`https://kahpehbini-api.vercel.app/api/v1/orders/${currentOrder._id}`, currentOrder, user.accessToken);
       setSuccessMessage("Updated successfully.");
       handleTimeout("success");
     } catch (err) {

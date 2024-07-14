@@ -10,7 +10,7 @@ import MyContext from "../../authContext";
 import CustomerOrders from "./Customers/CustomerOrders";
 
 function Customers() {
-  const { data, error, refetch } = useFetchData("https://kahpehbini-fgd4zefew-glays-projects.vercel.app/api/v1/users");
+  const { data, error, refetch } = useFetchData("https://kahpehbini-api.vercel.app/api/v1/users");
   const [updateData] = useUpdateData();
   const { user } = useContext(MyContext);
   const [showModal, setShowModal] = useState(false);
